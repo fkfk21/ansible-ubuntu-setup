@@ -1,0 +1,13 @@
+apt_requires:
+  - net-tools
+  - vim
+  - neovim
+  - global
+  - git
+  - gitk
+  - tmux
+  - build-essential
+  - curl
+  - ibus-mozc
+  - terminator
+  - zsh

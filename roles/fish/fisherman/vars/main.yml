@@ -1,0 +1,3 @@
+plugins:
+  - tohn/fish-git-util
+  - omf/theme-default

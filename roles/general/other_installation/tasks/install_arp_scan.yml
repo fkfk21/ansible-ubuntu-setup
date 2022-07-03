@@ -1,0 +1,51 @@
+---
+# Install arp scan
+
+- name: Check if {{ command_name }} is installed ( {{ command_name }} )
+  shell: "{{ command_name }} --version"
+  register: result
+  ignore_errors: true
+
+
+- name: Show Message ( {{ command_name }} )
+  block:
+    - debug:
+        msg: " Command is not exist! Install {{ command_name }} " 
+      when: result.failed
+    - debug:
+        msg: " Command is already exist! Skip {{ command_name }} Installation " 
+      when: not result.failed
+
+
+- name: installation process
+  when: result.failed
+
+  block:
+  - name: update apt caches (arp-scan)
+    apt:
+      update_cache: yes
+
+  - name: install dependencies (arp-scan)
+    apt:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - autoconf
+      - libpcap-dev
+
+  - name: generate temp folder (arp-scan)
+    tempfile:
+      state: directory
+      prefix: arp-scan
+    register: tmp_dir
+
+  - name: clone repository (arp-scan)
+    git:
+      repo: https://github.com/royhills/arp-scan.git 
+      dest: "{{ tmp_dir.path }}"
+
+  - name: installation (arp-scan)
+    shell: autoreconf --install && ./configure && make && make install
+    args:
+      chdir: "{{ tmp_dir.path }}"
+

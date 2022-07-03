@@ -1,0 +1,31 @@
+---
+
+- name: fisherman is exist or not
+  block:
+  - name: fisherman is exist or not
+    stat:
+      path: "~/.config/fish/functions/fisher.fish"
+    register: result
+  - name: Install Message
+    debug:
+      msg: "Install fisherman!"
+    when: not result.stat.exists
+  - name: Not Install Message
+    debug:
+      msg: "fisherman exists. Not Install"
+    when: result.stat.exists
+
+- name: Install fisherman
+  shell:
+    cmd: "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
+    executable: /usr/bin/fish
+  when: not result.stat.exists
+
+
+# bug
+- name: Install plugins
+  shell:
+    cmd: fisher install "{{ item }}"
+    executable: /usr/bin/fish
+  with_items: "{{ plugins }}"
+  when: false

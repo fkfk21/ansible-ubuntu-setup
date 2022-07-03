@@ -1,0 +1,29 @@
+---
+- name: Check if arp-scan is installed
+  shell: "{{ command_name }} --version"
+  register: result
+  ignore_errors: true
+
+
+- name: Show Message
+  block:
+    - debug:
+        msg: " Command is not exist! Install {{ command_name }} " 
+      when: result.failed
+    - debug:
+        msg: " Command is already exist! Finish Installation " 
+      when: not result.failed
+  
+
+
+- name: procedure when success
+  block:
+    - name: success
+      debug:
+        msg: "Success"
+
+    - name: success
+      debug:
+        msg: "Success"
+
+  when: result.failed

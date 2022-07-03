@@ -1,0 +1,10 @@
+---
+
+- name: Check task
+  import_role:
+    name: basic/command_check
+
+- name: Install Command
+  import_role:
+    name: basic/instal_{{ command_name }}
+  when: result.failed
