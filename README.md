@@ -28,13 +28,13 @@ ansible-playbook -i hosts setup.yml --ask-become-pass
 ```
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
-omf install bobthefish
-omf theme bobthefish
 ```
 
 ### install fisherman [fish]
 ```
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+
+fisher install fkfk21/theme-bobthefish
 ```
 
 ### install powerline font and change shell font
