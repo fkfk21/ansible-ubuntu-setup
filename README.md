@@ -38,6 +38,7 @@ fisher install fkfk21/theme-bobthefish
 ```
 
 ### install powerline font and change shell font
+iranaikamo
 ```
 git clone https://github.com/powerline/fonts.git
 cd fonts
@@ -81,8 +82,9 @@ unzip Cica_v5.0.2.zip -d Cica
 sudo mkdir /usr/share/fonts/truetype/cica
 sudo cp Cica/*.ttf /usr/share/fonts/truetype/cica/
 sudo fc-cache -vf
-
 ```
-copy to .fonts
-run ``` fc-cache -fv ```
+```
+gnome-tweaks
+```
+fonts -> Cica regular
 
