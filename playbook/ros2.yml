@@ -1,0 +1,12 @@
+---
+- hosts: local_env
+  connection: local
+  gather_facts: yes
+  become: yes
+  tasks:
+    - name: Install ROS2
+      import_role:
+        name: itnok.install_ros2_ubuntu
+      vars:
+        install_ros2_distro: "foxy"
+        install_ros2: "desktop"

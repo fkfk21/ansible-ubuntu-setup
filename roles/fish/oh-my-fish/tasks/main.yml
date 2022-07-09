@@ -1,6 +1,0 @@
----
-
-- name: Install oh-my-fish
-  shell:
-    cmd: fish<(curl -sL http://get.oh-my.fish)
-    executable: /usr/bin/fish

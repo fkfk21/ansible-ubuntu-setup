@@ -1,0 +1,11 @@
+---
+- hosts: local_env
+  connection: local
+  become: true
+  tasks:
+    - name: Install fish
+      import_role:
+        name: samdoran.fish
+    - name: Install fisherman and plugins
+      import_role:
+        name: fish/fisherman
