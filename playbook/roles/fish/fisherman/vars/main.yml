@@ -1,5 +1,0 @@
-plugins:
-  - tohn/fish-git-util
-  - fkfk21/theme-bobthefish
-  - oh-my-fish/plugin-balias
-  - oh-my-fish/plugin-expand

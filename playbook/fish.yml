@@ -6,6 +6,12 @@
     - name: Install fish
       import_role:
         name: samdoran.fish
+
+- hosts: local_env
+  connection: local
+  become: true
+  become_user: kenji
+  tasks:
     - name: Install fisherman and plugins
       import_role:
-        name: fish/fisherman
+        name: fish

@@ -1,0 +1,12 @@
+plugins:
+  - tohn/fish-git-util
+  - fkfk21/theme-bobthefish
+  - oh-my-fish/plugin-balias
+  - oh-my-fish/plugin-cd
+  - oh-my-fish/plugin-expand
+  - oh-my-fish/plugin-extract
+    #  - oh-my-fish/plugin-peco
+  - jethrokuan/z
+    #  - jethrokuan/fzf
+  - edc/bass
+  - 0rax/fish-bd

@@ -1,0 +1,7 @@
+---
+
+- name: Install plugins
+  shell:
+    cmd: fisher install {{ item }}
+    executable: /usr/bin/fish
+  with_items: "{{ plugins }}"
