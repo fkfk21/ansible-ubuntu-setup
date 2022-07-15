@@ -1,9 +1,12 @@
 ---
+- name: Import variables
+  import_playbook: variables.yml
+
 - hosts: local_env
   connection: local
   gather_facts: false
   become: true
-  become_user: kenji
+  become_user: "{{ local_user_id }}"
   tasks:
     - name: set git config
       git_config:

@@ -1,4 +1,7 @@
 ---
+- name: Import variables
+  import_playbook: variables.yml
+
 - hosts: local_env
   connection: local
   become: true
@@ -9,9 +12,14 @@
 
 - hosts: local_env
   connection: local
+  gather_facts: false
   become: true
-  become_user: kenji
+  become_user: "{{ local_user_id }}"
   tasks:
-    - name: Install fisherman and plugins
+    - name: Install fisherman
+      shell:
+        cmd: curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+        executable: /usr/bin/fish
+    - name: Install fisherman plugins
       import_role:
         name: fish

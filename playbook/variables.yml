@@ -1,0 +1,9 @@
+- hosts: local_env
+  connection: local
+  gather_facts: true
+  gather_subset:
+    - "user_id"
+    - "!all"
+    - "!min"
+  tasks:
+    - set_fact: local_user_id={{ ansible_user_id }}
