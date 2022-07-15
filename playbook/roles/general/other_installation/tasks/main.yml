@@ -1,5 +1,0 @@
----
-
-- import_tasks: install_arp_scan.yml
-  vars:
-    command_name: arp-scan

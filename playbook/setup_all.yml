@@ -1,0 +1,20 @@
+---
+# execute all roles except ros installation
+# for ros installation choose when true
+
+- name: Install default
+  import_playbook: default_setup.yml
+
+- name: Install fish, fisherman and some plugins
+  import_playbook: fish.yml
+
+- name: Set gitconfig
+  import_playbook: git.yml
+
+- name: Install ros1
+  import_playbook: ros1.yml
+  when: false
+
+- name: Install ros2
+  import_playbook: ros2.yml
+  when: false

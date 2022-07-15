@@ -1,0 +1,14 @@
+---
+
+# Install default
+- hosts: local_env
+  connection: local
+  become: true
+  tasks:
+    - name: Install apt packages
+      import_role:
+        name: general/apt_packages
+    - name: Install arp scan
+      import_role:
+        name: general/arp_scan
+  

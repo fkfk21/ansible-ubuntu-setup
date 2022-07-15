@@ -3,3 +3,6 @@
 
 # from galaxy
 - src: itnok.install_ros_ubuntu
+
+# from galaxy
+- src: itnok.install_ros2_ubuntu
