@@ -78,4 +78,5 @@ This setting is applied to fkfk21/dotfiles/config.fish
 python3-colcon-common-extensions
 python3-rosdep
 
-
+### pip install
+pip3 install --user argcomplete
