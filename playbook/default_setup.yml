@@ -11,4 +11,19 @@
     - name: Install arp scan
       import_role:
         name: general/arp_scan
-  
+
+- name: Import variables
+  import_playbook: variables.yml
+
+- hosts: local_env
+  connection: local
+  gather_facts: false
+  become: true
+  become_user: "{{ local_user_id }}"
+  tasks:
+    - name: Install vim bundle
+      import_role:
+        name: vim
+    - name: clone and setup dotfiles
+      import_role:
+        name: dotfiles

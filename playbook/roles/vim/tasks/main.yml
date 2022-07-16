@@ -1,0 +1,14 @@
+---
+
+- name: create vim bundle directory
+  file:
+    path: "~/.vim/bundle"
+    state: directory
+    owner: "{{ local_user_id }}"
+    group: "{{ local_user_id }}"
+    mode: 0755
+
+- name: clone vundle
+  ansible.builtin.git:
+    repo: https://github.com/gmarik/vundle.git
+    dest: /home/{{ local_user_id }}/.vim/bundle/vundle

@@ -1,0 +1,11 @@
+---
+
+- name: clone dotfiles
+  ansible.builtin.git:
+    repo: git@github.com:fkfk21/dotfiles.git
+    dest: /home/{{ local_user_id }}/dotfiles
+
+- name: run linkdotfiles.sh
+  ansible.builtin.shell:
+    cmd: /home/{{ local_user_id }}/dotfiles/linkdotfiles.sh
+    executable: /usr/bin/bash
