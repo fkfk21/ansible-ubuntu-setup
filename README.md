@@ -20,7 +20,7 @@ ansible-galaxy list
 
 in playbook directory
 ```
-ansible-playbook -i hosts setup.yml --ask-become-pass
+ansible-playbook -i hosts setup_all.yml --ask-become-pass
 ```
 
 # unimplemented commands
