@@ -1,0 +1,13 @@
+---
+- name: check /etc/skel/.bashrc
+  stat:
+    path: /etc/skel/.bashrc
+  register: result
+
+- name: mv default .bashrc to /etc/skel
+  block:
+    - name: Copy .bashrc to /etc/skel
+      copy: remote_src=True src=/home/{{ ansible_facts.env.SUDO_USER }}/.bashrc dest=/etc/skel/.bashrc
+    - name: Remove .bashrc
+      file: path=/home/{{ ansible_facts.env.SUDO_USER }}/.bashrc state=absent
+  when: not result.stat.exists

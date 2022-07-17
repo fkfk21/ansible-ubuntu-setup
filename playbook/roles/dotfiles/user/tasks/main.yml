@@ -1,4 +1,8 @@
 ---
+- name: check skel/.bashrc
+  stat:
+    path: /etc/skel/.bashrc
+  register: result
 
 - name: clone dotfiles
   ansible.builtin.git:

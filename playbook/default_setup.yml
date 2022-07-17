@@ -1,6 +1,7 @@
 ---
 
 # Install default
+# commands need sudo
 - hosts: local_env
   connection: local
   become: true
@@ -11,10 +12,14 @@
     - name: Install arp scan
       import_role:
         name: general/arp_scan
+    - name: sudo task for dotfiles
+      import_role: 
+        name: dotfiles/sudo
 
 - name: Import variables
   import_playbook: variables.yml
 
+# execute by user
 - hosts: local_env
   connection: local
   gather_facts: false
@@ -26,4 +31,4 @@
         name: vim
     - name: clone and setup dotfiles
       import_role:
-        name: dotfiles
+        name: dotfiles/user
