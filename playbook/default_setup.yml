@@ -4,6 +4,7 @@
 # commands need sudo
 - hosts: local_env
   connection: local
+  gather_facts: true
   become: true
   tasks:
     - name: Install apt packages

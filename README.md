@@ -25,20 +25,16 @@ ansible-playbook -i hosts setup_all.yml --ask-become-pass
 
 # unimplemented commands
 
-### install nerd-fonts
-```
-cd tmp
-curl -L -O https://github.com/miiton/Cica/releases/download/v5.0.2/Cica_v5.0.2.zip
-unzip Cica_v5.0.2.zip -d Cica
-sudo mkdir /usr/share/fonts/truetype/cica
-sudo cp Cica/*.ttf /usr/share/fonts/truetype/cica/
-sudo fc-cache -vf
-```
-```
-gnome-tweaks
-```
-設定画面
+### install nerd-fonts in Cica
+I added scripts/install_cica_fonts.sh
+
+
+in gnome-tweaks setting display
 fonts -> Cica regular
+
+If you use wsl/wsl2, you have to install cica fonts in Windows
+
+-> right-click wsl window -> set font "Cica"
 
 ### fish prompt settings
 in ~/.config/fish/config.fish
