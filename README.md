@@ -70,9 +70,8 @@ This setting is applied to fkfk21/dotfiles/config.fish
 ```
 
 ## ros2 install
-### lacked apt install
-python3-colcon-common-extensions
-python3-rosdep
-
-### pip install
-pip3 install --user argcomplete
+### execute
+```
+sudo rosdep init
+rosdep update
+```
