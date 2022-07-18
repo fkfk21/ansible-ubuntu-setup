@@ -5,8 +5,10 @@ plugins:
   - oh-my-fish/plugin-cd
   - oh-my-fish/plugin-expand
   - oh-my-fish/plugin-extract
+  - oh-my-fish/plugin-pbcopy
     #  - oh-my-fish/plugin-peco
   - jethrokuan/z
   - jethrokuan/fzf
   - edc/bass
   - 0rax/fish-bd
+  - laughedelic/pisces
