@@ -10,7 +10,6 @@
       vars:
         install_ros2_distro: "foxy"
         install_ros2: "desktop"
-      when: false
     - name: Install apt requires
       apt:
         name: "{{ item }}"
