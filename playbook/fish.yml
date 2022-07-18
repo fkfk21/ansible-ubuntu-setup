@@ -9,6 +9,10 @@
     - name: Install fish
       import_role:
         name: samdoran.fish
+    - name: Install apt requires for fish
+      apt:
+        name:
+          - fzf
 
 - hosts: local_env
   connection: local

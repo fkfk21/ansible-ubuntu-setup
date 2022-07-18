@@ -7,6 +7,6 @@ plugins:
   - oh-my-fish/plugin-extract
     #  - oh-my-fish/plugin-peco
   - jethrokuan/z
-    #  - jethrokuan/fzf
+  - jethrokuan/fzf
   - edc/bass
   - 0rax/fish-bd
