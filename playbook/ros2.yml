@@ -10,3 +10,13 @@
       vars:
         install_ros2_distro: "foxy"
         install_ros2: "desktop"
+      when: false
+    - name: Install apt requires
+      apt:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - python3-pip
+        - python3-colcon-common-extensions
+        - python3-rosdep
+
