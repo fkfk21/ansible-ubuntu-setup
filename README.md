@@ -75,3 +75,7 @@ This setting is applied to fkfk21/dotfiles/config.fish
 sudo rosdep init
 rosdep update
 ```
+## python install
+```
+sudo apt install python3-venv
+```
