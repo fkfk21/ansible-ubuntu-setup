@@ -11,3 +11,4 @@ apt_requires:
   - ibus-mozc
   - terminator
   - zsh
+  - fzf
