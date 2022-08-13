@@ -12,3 +12,4 @@ apt_requires:
   - terminator
   - zsh
   - fzf
+  - golang
