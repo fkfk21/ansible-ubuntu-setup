@@ -6,9 +6,9 @@ sudo ./script/install_ansible.sh
 ```
 
 ## install ansible role
-in playbook directory
+in script directory
 ```
-ansible-galaxy install -r requirements.txt
+ansible-galaxy install -r galaxy_requirements.txt
 ```
 ## show ansible galaxy roles list
 
