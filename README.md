@@ -79,3 +79,24 @@ rosdep update
 ```
 sudo apt install python3-venv
 ```
+
+### install ghq
+```
+git clone https://github.com/asdf-vm/asdf ~/.asdf
+chmod +x ~/.asdf/asdf.fish
+# echo "source ~/.asdf/asdf.fish" >> ~/.config/fish/config.fish
+source ~/.asdf/asdf.fish
+asdf plugin add ghq
+asdf install ghq latest
+asdf global ghq 1.3.0
+```
+
+```
+git config --global ghq.root '~/ghq'
+fisher install decors/fish-ghq
+```
+
+### install peco
+```
+sudo apt install peco
+```
