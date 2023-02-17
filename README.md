@@ -6,9 +6,8 @@ sudo ./script/install_ansible.sh
 ```
 
 ## install ansible role
-in playbook directory
 ```
-ansible-galaxy install -r requirements.txt
+./script/install_galaxy_roles.sh
 ```
 ## show ansible galaxy roles list
 
@@ -29,8 +28,8 @@ ansible-playbook -i hosts setup_all.yml --ask-become-pass
 I added scripts/install_cica_fonts.sh
 
 
-in gnome-tweaks setting display
-fonts -> Cica regular
+in gnome-tweaks setting display,
+fonts -> Monospace Text -> Cica regular
 
 If you use wsl/wsl2, you have to install cica fonts in Windows
 
