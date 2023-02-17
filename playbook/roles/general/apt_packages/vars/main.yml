@@ -13,3 +13,4 @@ apt_requires:
   - zsh
   - fzf
   - golang
+  - dconf-editor
