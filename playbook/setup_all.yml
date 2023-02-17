@@ -4,12 +4,15 @@
 
 - name: Install default
   import_playbook: default_setup.yml
+  when: true
 
 - name: Install fish, fisherman and some plugins
   import_playbook: fish.yml
+  when: true
 
 - name: Set gitconfig
   import_playbook: git.yml
+  when: true
 
 - name: Install ros1
   import_playbook: ros1.yml
