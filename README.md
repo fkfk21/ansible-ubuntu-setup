@@ -24,6 +24,9 @@ ansible-playbook -i hosts setup_all.yml --ask-become-pass
 
 # unimplemented commands
 
+### install docker
+TODO
+
 ### install nerd-fonts in Cica
 I added scripts/install_cica_fonts.sh
 
