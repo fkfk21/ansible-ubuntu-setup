@@ -1,0 +1,10 @@
+---
+- name: Update all packages
+  apt:
+    update_cache: yes
+
+- name: Install snap packages
+  snap:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ snap_requires }}"

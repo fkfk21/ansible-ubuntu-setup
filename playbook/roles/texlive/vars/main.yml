@@ -1,0 +1,6 @@
+requires:
+  - texlive
+  - texlive-lang-cjk
+  - texlive-fonts-extra
+  - latexmk
+  - texlive-science

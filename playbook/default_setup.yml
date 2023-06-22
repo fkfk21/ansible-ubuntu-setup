@@ -16,6 +16,9 @@
     - name: sudo task for dotfiles
       import_role: 
         name: dotfiles/sudo
+    - name: Install snap packages
+      import_role:
+        name: general/snap_packages
 
 - name: Import variables
   import_playbook: variables.yml

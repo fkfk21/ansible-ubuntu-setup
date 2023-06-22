@@ -11,4 +11,5 @@ sudo cp Cica/*.ttf /usr/share/fonts/truetype/cica/
 sudo fc-cache -vf
 cd ../
 rm -rf tmp
-gnome-tweaks
+
+gnome-terminal --execute "gnome-tweaks"
