@@ -135,7 +135,10 @@ gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
 [reference](https://docs.ros.org/en/humble/Installation.html)
 [debian install](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
 
+install pip argcomplete at first for fish settings
 ```
+sudo apt install python3-pip
+pip install argcomplete
 sudo scripts/install_ros2.sh
 ```
 

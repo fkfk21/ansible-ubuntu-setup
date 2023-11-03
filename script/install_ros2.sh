@@ -1,6 +1,6 @@
 # reference -> https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
 
-apt install -y software-properties-common
+apt install -y software-properties-common python3-pip
 add-apt-repository -y universe
 
 apt update && apt install -y curl
