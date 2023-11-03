@@ -10,3 +10,4 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 apt update
 apt install -y ros-humble-desktop ros-dev-tools 
 
+rosdep init
