@@ -1,8 +1,5 @@
 # from galaxy
-- src: samdoran.fish
+# - src: samdoran.fish
 
 # from galaxy
-- src: itnok.install_ros_ubuntu
-
-# from galaxy
-- src: itnok.install_ros2_ubuntu
+# - src: rarrais.ros2

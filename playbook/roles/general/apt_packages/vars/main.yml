@@ -14,3 +14,4 @@ apt_requires:
   - fzf
   - golang
   - dconf-editor
+  - fish

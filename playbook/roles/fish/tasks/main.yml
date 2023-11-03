@@ -6,7 +6,7 @@
     executable: /usr/bin/fish
   with_items: "{{ plugins }}"
 
-- name: set shell theme
-  shell:
-    cmd: fish_config theme choose Tomorrow\ Night\ Bright
-    executable: /usr/bin/fish
+# - name: set shell theme
+#   shell:
+#     cmd: fish_config theme choose Tomorrow\ Night\ Bright
+#     executable: /usr/bin/fish

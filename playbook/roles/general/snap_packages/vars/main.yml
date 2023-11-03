@@ -1,4 +1,3 @@
 snap_requires:
-  - notion-snap
   - slack
   - discord

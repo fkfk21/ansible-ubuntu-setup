@@ -14,10 +14,10 @@
   import_playbook: git.yml
   when: true
 
-- name: Install ros1
-  import_playbook: ros1.yml
-  when: false
+# - name: Install ros1
+#   import_playbook: ros1.yml
+#   when: false
 
-- name: Install ros2
-  import_playbook: ros2.yml
-  when: false
+# - name: Install ros2
+#   import_playbook: ros2.yml
+#   when: false

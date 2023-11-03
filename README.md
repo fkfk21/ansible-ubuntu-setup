@@ -1,3 +1,7 @@
+# Version
+For Ubuntu22
+
+
 # Install process
 ## install ansible
 
@@ -102,4 +106,13 @@ fisher install decors/fish-ghq
 ### install peco
 ```
 sudo apt install peco
+```
+### multidisplay setting before login
+```
+sudo cp ~/.config/monitors.xml /var/lib/gdm3/.config/monitors.xml
+```
+
+### change application icon position
+```
+gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
 ```
