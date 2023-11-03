@@ -107,6 +107,20 @@ fisher install decors/fish-ghq
 ```
 sudo apt install peco
 ```
+
+### install vscode
+```
+sudo apt install curl apt-transport-https gpg
+sudo apt-get install wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+sudo apt update
+sudo apt install code
+```
+
+
 ### multidisplay setting before login
 ```
 sudo cp ~/.config/monitors.xml /var/lib/gdm3/.config/monitors.xml
@@ -116,3 +130,19 @@ sudo cp ~/.config/monitors.xml /var/lib/gdm3/.config/monitors.xml
 ```
 gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
 ```
+
+### install ros2
+[reference](https://docs.ros.org/en/humble/Installation.html)
+[debian install](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
+
+```
+sudo scripts/install_ros2.sh
+```
+
+
+
+## after installation memo
+1. login slack workspace
+
+
+
