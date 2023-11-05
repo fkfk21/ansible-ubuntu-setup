@@ -142,6 +142,18 @@ pip install argcomplete
 sudo scripts/install_ros2.sh
 ```
 
+### resolve the issue of Ubuntu resuming from suspend on its own
+[reference](https://lookbackmargin.blog/2019/06/07/52224703/)
+```
+cat /proc/acpi/wakeup
+```
+
+/etc/rc.local
+```
+#! /bin/sh
+echo PTXH > /proc/acpi/wakeup
+echo XHC0 > /proc/acpi/wakeup
+```
 
 
 ## after installation memo
