@@ -15,3 +15,4 @@ apt_requires:
   - golang
   - dconf-editor
   - fish
+  - conky-all
