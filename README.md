@@ -28,6 +28,19 @@ ansible-playbook -i hosts setup_all.yml --ask-become-pass
 ```
 
 # unimplemented commands
+### install vim plugins
+vim
+command
+```
+:PluginInstall
+```
+
+### install zoxide (for zi command)
+```
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+```
+
+
 
 ### install docker
 TODO
