@@ -35,6 +35,14 @@ command
 :PluginInstall
 ```
 
+### install latest neovim
+```
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-get update
+sudo apt-get install neovim
+```
+
+
 ### install zoxide (for zi command)
 ```
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
