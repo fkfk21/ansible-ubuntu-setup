@@ -116,10 +116,8 @@ sudo apt install python3-venv
 asdfのinstall方法が最新だと変わるのでチェック
 
 ```
-git clone https://github.com/asdf-vm/asdf ~/.asdf
-chmod +x ~/.asdf/asdf.fish
-# echo "source ~/.asdf/asdf.fish" >> ~/.config/fish/config.fish
-source ~/.asdf/asdf.fish
+# download pre-build binary
+install -m 0755 /path/to/asdf ~/.local/bin/asdf
 asdf plugin add ghq
 asdf install ghq latest
 asdf global ghq 1.3.0
