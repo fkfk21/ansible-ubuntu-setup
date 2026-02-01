@@ -120,7 +120,7 @@ asdfのinstall方法が最新だと変わるのでチェック
 install -m 0755 /path/to/asdf ~/.local/bin/asdf
 asdf plugin add ghq
 asdf install ghq latest
-asdf global ghq 1.3.0
+# add config.fish -> set -x PATH $HOME/.asdf/shims $PATH
 ```
 
 ```
