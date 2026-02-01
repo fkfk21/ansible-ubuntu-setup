@@ -113,13 +113,13 @@ sudo apt install python3-venv
 
 ### install ghq
 
-asdfのinstall方法が最新だと変わるのでチェック
 
 ```
 # download pre-build binary
 install -m 0755 /path/to/asdf ~/.local/bin/asdf
 asdf plugin add ghq
 asdf install ghq latest
+asdf set ghq 1.8.0
 # add config.fish -> set -x PATH $HOME/.asdf/shims $PATH
 ```
 
